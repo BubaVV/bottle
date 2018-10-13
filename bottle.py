@@ -1599,6 +1599,7 @@ class BaseRequest(object):
 
 
 def _hkey(key):
+    key = tonat(key)
     if '\n' in key or '\r' in key or '\0' in key:
         raise ValueError("Header names must not contain control characters: %r" % key)
     return key.title().replace('_', '-')
