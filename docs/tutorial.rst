@@ -13,7 +13,7 @@
 .. _mod_wsgi: http://code.google.com/p/modwsgi/
 .. _Paste: http://pythonpaste.org/
 .. _Pound: http://www.apsis.ch/pound/
-.. _`WSGI Specification`: http://www.wsgi.org/
+.. _WSGI_Specification: http://www.wsgi.org/
 .. _issue: http://github.com/bottlepy/bottle/issues
 .. _Python: http://python.org/
 .. _SimpleCookie: http://docs.python.org/library/cookie.html#morsel-objects
@@ -44,7 +44,7 @@ This will get you the latest development snapshot that includes all the new feat
     $ sudo easy_install bottle             # alternative without pip
     $ sudo apt-get install python-bottle   # works for debian, ubuntu, ...
 
-Either way, you'll need Python 2.7 or newer (including 3.2+) to run bottle applications. If you do not have permissions to install packages system-wide or simply don't want to, create a `virtualenv <http://pypi.python.org/pypi/virtualenv>`_ first:
+Either way, you'll need Python 2.7 or newer (including 3.4+) to run bottle applications. If you do not have permissions to install packages system-wide or simply don't want to, create a `virtualenv <http://pypi.python.org/pypi/virtualenv>`_ first:
 
 .. code-block:: bash
 
@@ -362,7 +362,7 @@ To redirect a client to a different URL, you can send a ``303 See Other`` respon
 You may provide a different HTTP status code as a second parameter.
 
 .. note::
-    Both functions will interrupt your callback code by raising an :exc:`HTTPError` exception.
+    Both functions will interrupt your callback code by raising an :exc:`HTTPResponse` exception.
 
 .. rubric:: Other Exceptions
 
@@ -675,7 +675,7 @@ You can access the raw body data as a file-like object via :attr:`BaseRequest.bo
 WSGI Environment
 --------------------------------------------------------------------------------
 
-Each :class:`BaseRequest` instance wraps a WSGI environment dictionary. The original is stored in :attr:`BaseRequest.environ`, but the request object itself behaves like a dictionary, too. Most of the interesting data is exposed through special methods or attributes, but if you want to access `WSGI environ variables <WSGI specification>`_ directly, you can do so::
+Each :class:`BaseRequest` instance wraps a WSGI environment dictionary. The original is stored in :attr:`BaseRequest.environ`, but the request object itself behaves like a dictionary, too. Most of the interesting data is exposed through special methods or attributes, but if you want to access `WSGI environ variables <WSGI_Specification>`_ directly, you can do so::
 
   @route('/my_ip')
   def show_ip():

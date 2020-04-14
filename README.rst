@@ -3,17 +3,9 @@
   :alt: Bottle Logo
   :align: right
 
-.. image:: https://travis-ci.org/bottlepy/bottle.svg?branch=master
-    :target: https://travis-ci.org/bottlepy/bottle
-    :alt: Bottle Build
-
-.. image:: https://circleci.com/gh/bottlepy/bottle.svg?style=svg
-   :target: https://circleci.com/gh/bottlepy/bottle
-   :alt: CI Bottle
-
-.. image:: https://coveralls.io/repos/github/bottlepy/bottle/badge.svg?branch=master
-   :target: https://coveralls.io/github/bottlepy/bottle?branch=master
-   :alt: Coverage
+.. image:: https://github.com/bottlepy/bottle/workflows/Tests/badge.svg
+    :target: https://github.com/bottlepy/bottle/workflows/Tests
+    :alt: Tests Status
 
 .. image:: https://img.shields.io/pypi/v/bottle.svg
     :target: https://pypi.python.org/pypi/bottle/
@@ -69,7 +61,7 @@ Download and Install
 
 .. __: https://github.com/bottlepy/bottle/raw/master/bottle.py
 
-Install the latest stable release with ``pip install bottle``, ``easy_install -U bottle`` or download `bottle.py`__ (unstable) into your project directory. There are no hard dependencies other than the Python standard library. Bottle runs with **Python 2.7 and 3.3+**.
+Install the latest stable release with ``pip install bottle`` or download `bottle.py`__ (unstable) into your project directory. There are no hard dependencies other than the Python standard library. Bottle runs with **Python 2.7 and 3.4+**.
 
 
 License
